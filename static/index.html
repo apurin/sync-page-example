@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twilio Sync</title>
+    <meta charset="utf-8" />
+
+    <!–– jQuery and Bootstrap https://getbootstrap.com ––>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Twilio Sync SDK via CDN -->
+    
+    <script src="https://media.twiliocdn.com/sdk/js/sync/releases/0.11.5/twilio-sync.js"></script>
+
+    <style>
+        body {
+            padding: 10px;
+        }
+
+        h1 {
+            font-family: "Impact", fantasy;
+            color: deepskyblue;
+        }
+
+        table {
+            padding-top: 10px;
+        }
+
+        .card {
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 1280px;
+            width: 100%;
+        }
+
+        .input-group-text {
+            min-width: 10em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Twilio Sync co-browsing example</h1>
+        <a href="/" target="_blank">Open another tab</a><br><br>
+        <div class="card border-primary">
+            <div class="card-header text-info text-right bg-transparent">
+                Tab identity: <code><span id="tab-identity">NONE</span></code>&nbsp;&nbsp;&nbsp;
+                <span class="badge badge-primary" id="badge-status">NONE</span>
+            </div>
+            <div class="card-body">
+                <!-- Examples -->
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="prefix-name">Name</span>
+                        </div>
+                        <input type="text" id="input-name" class="form-control" placeholder="Write something here and see it is syncronised amoung tabs">
+                    </div>
+                    
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="prefix-surname">Surname</span>
+                        </div>
+                        <input type="text" id="input-surname" class="form-control" placeholder="Write something here and see it is syncronised amoung tabs">
+                    </div>
+            </div>
+
+            <div class="card-header text-info" id="tab-status">
+                Status
+            </div>            
+        </div>
+
+    </div>
+
+
+    <!–– Page scipts ––>
+    <script src="/index.js"></script>
+</body>
+</html>
